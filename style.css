@@ -1,0 +1,45 @@
+/* Start Gloable Rules */
+a {
+    text-decoration: none;
+}
+
+h2 {
+    margin: 0;
+}
+
+body {
+    transition: .3s;
+    margin: 0;
+    display: flex;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Small */
+@media(min-width: 767px) {
+    
+}
+
+/*medium*/
+@media(min-width:992px) {
+    
+}
+
+/* larg */
+@media(min-width:1200px) {
+
+}
+
+.container {
+    padding: 15px;
+    margin: 0 auto;
+}
+
+/* End Glaobal Rules */
