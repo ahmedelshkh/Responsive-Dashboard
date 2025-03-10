@@ -136,13 +136,19 @@ html {
 }
 
 /* Small */
-@media(min-width: 767px) {
-    
+@media(max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+    .display-mobile {
+        display: block !important;
+    }
 }
 
-/*medium*/
-@media(min-width:992px) {
-    
+@media(min-width:767px) {
+    .hide-td {
+        display: none;
+    }
 }
 
 /* larg */
@@ -160,6 +166,7 @@ html {
 /* Start Side Bar */
 .sidebar {
     border-right: 1px solid var(--section-bd-color);
+    background-color: var(--color-white);
 }
 .sidebar .logo {
     display: flex;
@@ -292,5 +299,23 @@ header .notification-icon:hover svg {
 header .profile {
     width: 60px;
     height: 60px;
+}
+@media(max-width: 991px) {
+    header .main-title {
+        font-size: var(--fs-20);
+    }
+    header .profile {
+        width: 35px;
+        height: 35px;
+    }
+}
+@media(max-width: 768px) {
+    .sidebar {
+        position: absolute;
+        transition: .4s linear;
+        left: -400px;
+        top: 0;
+        z-index: 100;
+    }
 }
 /* End Header */
