@@ -153,3 +153,69 @@ html {
 }
 
 /* End Glaobal Rules */
+
+/* Start Side Bar */
+.sidebar {
+    border-right: 1px solid #E6EFF5;
+}
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+}
+.sidebar .logo a {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: var(--fs-25);
+    color: var(--font-color-main);
+}
+.sidebar .links li {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    transition: .3s;
+}
+.sidebar .links li a {
+    color: var(--color-gray);
+    font-size: var(--fs-18);
+    padding-top: 2px;
+    font-weight: 500;
+}
+.sidebar .links li svg {
+    fill: var(--color-gray);
+}
+.sidebar li:hover a {
+    color: var(--color-blue);
+}
+.sidebar li:hover svg {
+    fill: var(--color-blue);
+}
+.sidebar li:hover::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: var(--color-blue);
+    border-radius: 0 5px 5px 0;
+    left: -15px;
+    top: 0;
+}
+li.selected::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: var(--color-blue);
+    border-radius: 0 5px 5px 0;
+    left: -15px;
+    top: 0;
+}
+li.selected a {
+    color: var(--color-blue) !important;
+}
+li.selected svg {
+    fill: var(--color-blue) !important;
+}
+/* End Side Bar */
