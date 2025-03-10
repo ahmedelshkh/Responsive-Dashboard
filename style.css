@@ -8,6 +8,8 @@
     --color-green: #16DBCC;
     --color-gradient: #4C49ED 0, #0A06F4 100%;
     --bg-color-main: #F5F7FA;
+    --section-bd-color: #E6EFF5;
+    --search-in-color: #8BA3CB;
     --color-white: white;
     --color-black: black;
 
@@ -16,6 +18,7 @@
     --fs-18: 1.1em;
     --fs-20: 1.2em;
     --fs-25: 1.55em;
+    --fs-28: 1.8em;
     --fs-32: 2em;
     --fs-48: 3em;
     --fs-100: 7em;
@@ -156,7 +159,7 @@ html {
 
 /* Start Side Bar */
 .sidebar {
-    border-right: 1px solid #E6EFF5;
+    border-right: 1px solid var(--section-bd-color);
 }
 .sidebar .logo {
     display: flex;
@@ -219,3 +222,75 @@ li.selected svg {
     fill: var(--color-blue) !important;
 }
 /* End Side Bar */
+/* Start Header */
+.content {
+    width: 100%;
+}
+header {
+    border-bottom: 1px solid var(--section-bd-color);
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .main-title {
+    color: var(--font-color-main);
+    font-size: var(--fs-28);
+    font-weight: 700;
+    padding: 20px;
+}
+header .search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header form {
+    width: 255px;
+    height: 50px;
+    background-color: var(--bg-color-main);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: .3s;
+}
+header form input[type=search] {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--search-in-color);
+    width: 152px;
+}
+header form input[type=search]::placeholder {
+    color: var(--search-in-color);
+}
+header form:focus-within{
+    border: 1px solid var(--search-in-color);
+    width: 280px;
+}
+header .settings-icon,
+header .notification-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--bg-color-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+header .settings-icon:hover svg,
+header .notification-icon:hover svg {
+    transition: .3s;
+}
+header .settings-icon:hover svg,
+header .notification-icon:hover svg {
+    transform: rotate(30deg) scale(1.1);
+}
+header .profile {
+    width: 60px;
+    height: 60px;
+}
+/* End Header */
