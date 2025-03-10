@@ -9,7 +9,6 @@ menuIcon.addEventListener("click", function(){
         sidebar.style.cssText = "left: -400px;";
         menuClicked = false;
     }else {
-        sidebar.classList.remove("hide-mobile");
         sidebar.style.cssText = "left: 0;";
         menuClicked = true;
     }
