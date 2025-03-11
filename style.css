@@ -297,8 +297,8 @@ header .notification-icon:hover svg {
     transform: rotate(30deg) scale(1.1);
 }
 header .profile {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
 }
 @media(max-width: 991px) {
     header .main-title {
