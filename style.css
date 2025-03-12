@@ -509,7 +509,7 @@ header .profile {
 .card3 .transaction .box .price.green {
     color: #41D4A8;
 }
-@media(max-width: 992px) {
+@media(max-width: 1170px) {
     .overview .container {
         padding: 15px !important;
         grid-template-areas: none;
