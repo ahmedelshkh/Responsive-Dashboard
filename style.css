@@ -14,9 +14,11 @@
     --color-black: black;
 
     /* fonts size */
+    --fs-11: .8em;
     --fs-14: .9em;
     --fs-18: 1.1em;
     --fs-20: 1.2em;
+    --fs-22: 1.3em;
     --fs-25: 1.55em;
     --fs-28: 1.8em;
     --fs-32: 2em;
@@ -109,6 +111,27 @@
     font-style: normal;
     font-weight: 400;
     src: url('/fonts/abril-fatface-v23-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/lato-v24-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lato-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/lato-v24-latin-700.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 a {
@@ -235,6 +258,7 @@ li.selected svg {
 }
 header {
     border-bottom: 1px solid var(--section-bd-color);
+    background-color: var(--color-white);
 }
 header .container {
     display: flex;
@@ -319,3 +343,163 @@ header .profile {
     }
 }
 /* End Header */
+/* Start Cards */
+/* End Cards */
+.content {
+    background-color: var(--bg-color-main);
+}
+.content .overview .container {
+    padding: 15px 40px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 20px;
+}
+.cards .card {
+    padding-top: 15px;
+    border-radius: 20px;
+    font-family: "Lato", sans-serif;
+}
+.cards .card div{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.cards .card > div {
+    padding: 10px 25px;
+}
+.cards .card .balance {
+    font-size: var(--fs-20);
+}
+.cards .card .balance::before {
+    content: "Balnce";
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    font-size: var(--fs-11);
+    font-weight: 400;
+}
+.cards .card .balance,
+.cards .card .card-holder,
+.cards .card .valid {
+    font-weight: bold;
+    position: relative;
+}
+.cards .card .card-holder::before,
+.cards .card .valid::before {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    font-size: var(--fs-11);
+    font-weight: 400;
+}
+.cards .card .card-holder::before {
+    content: "CARD HOLDER";
+}
+.cards .card .valid {
+    width: 70px;
+}
+.cards .card .valid::before {
+    content: "VALID THRU";
+}
+.cards .card .card-num {
+    font-weight: bold;
+    font-size: var(--fs-18);
+    display: flex;
+    align-items: center;
+}
+.cards .card .card-logo div {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+.cards .card .card-logo .circle1 {
+    margin-right: -20px;
+}
+.cards .card1 .card {
+    background: linear-gradient(45deg, var(--color-gradient));
+}
+.cards .card1 .card .balance,
+.cards .card1 .card .card-holder,
+.cards .card1 .card .valid,
+.cards .card1 .card .card-num {
+    color: var(--color-white);
+}
+.cards .card1 p,
+.cards .card2>p,
+.cards .card3>p {
+    font-size: var(--fs-22);
+    color: var(--font-color-main);
+    font-weight: 700;
+}
+.cards .card1 .card-holder::before,
+.cards .card1 .card .valid::before {
+    color: rgb(255 255 255/ 70%)
+}
+.cards .card1 .card .foot {
+    background: linear-gradient(180deg, rgb(255 255 255 / 15%), rgb(255 255 255 / 0%));
+}
+.cards .card1 .card .card-logo div {
+    background-color: rgb(255 255 255/ 50%);
+}
+.cards .card2 > p {
+    text-align: right;
+    font-size: var(--fs-18);
+    margin-top: 26px;
+}
+.cards .card2 .card {
+    border: 1px solid var(--section-bd-color);
+    background-color: var(--color-white);
+}
+.cards .card2 .card .foot {
+    border-top: 1px solid var(--section-bd-color);
+}
+.cards .card2 .card .card-logo div {
+    background-color: rgb(145 153 175 / 50%);
+}
+.cards .card3 .transaction {
+    padding: 15px;
+    border-radius: 25px;
+    background-color: var(--color-white);
+}
+.cards .card3 .transaction .box .info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.cards .card3 .transaction .box:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+.cards .card3 .transaction .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cards .card3 .transaction .box .icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.cards .card3 .transaction .box .icon.yellow {
+    background-color: #FFF5D9;
+}
+.cards .card3 .transaction .box .icon.blue {
+    background-color: #E7EDFF;
+}
+.cards .card3 .transaction .box .icon.green {
+    background-color: #DCFAF8;
+}
+.cards .card3 .transaction .box .tr-date {
+    font-size: var(--fs-14);
+    color: #718EBF;
+}
+.cards .card3 .transaction .box .price.red {
+    color: #FF4B4A;
+}
+.cards .card3 .transaction .box .price.green {
+    color: #41D4A8;
+}
