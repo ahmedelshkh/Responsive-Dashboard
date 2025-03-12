@@ -348,12 +348,18 @@ header .profile {
 .content {
     background-color: var(--bg-color-main);
 }
-.content .overview .container {
-    padding: 15px 40px;
+.overview .container {
+    padding: 15px 0 0 40px;
+    display: grid;
+    grid-template-areas:
+        "cards cards transactions"
+        "w-activity w-activity stats"
+        "quick-transfare b-history b-history";
+    gap: 20px;
 }
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
     gap: 20px;
 }
 .cards .card {
@@ -428,7 +434,7 @@ header .profile {
 }
 .cards .card1 p,
 .cards .card2>p,
-.cards .card3>p {
+.card3>p {
     font-size: var(--fs-22);
     color: var(--font-color-main);
     font-weight: 700;
@@ -458,25 +464,25 @@ header .profile {
 .cards .card2 .card .card-logo div {
     background-color: rgb(145 153 175 / 50%);
 }
-.cards .card3 .transaction {
+.card3 .transaction {
     padding: 15px;
     border-radius: 25px;
     background-color: var(--color-white);
 }
-.cards .card3 .transaction .box .info {
+.card3 .transaction .box .info {
     display: flex;
     gap: 10px;
     align-items: center;
 }
-.cards .card3 .transaction .box:not(:last-of-type) {
+.card3 .transaction .box:not(:last-of-type) {
     margin-bottom: 10px;
 }
-.cards .card3 .transaction .box {
+.card3 .transaction .box {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.cards .card3 .transaction .box .icon {
+.card3 .transaction .box .icon {
     width: 55px;
     height: 55px;
     display: flex;
@@ -484,28 +490,29 @@ header .profile {
     align-items: center;
     border-radius: 50%;
 }
-.cards .card3 .transaction .box .icon.yellow {
+.card3 .transaction .box .icon.yellow {
     background-color: #FFF5D9;
 }
-.cards .card3 .transaction .box .icon.blue {
+.card3 .transaction .box .icon.blue {
     background-color: #E7EDFF;
 }
-.cards .card3 .transaction .box .icon.green {
+.card3 .transaction .box .icon.green {
     background-color: #DCFAF8;
 }
-.cards .card3 .transaction .box .tr-date {
+.card3 .transaction .box .tr-date {
     font-size: var(--fs-14);
     color: #718EBF;
 }
-.cards .card3 .transaction .box .price.red {
+.card3 .transaction .box .price.red {
     color: #FF4B4A;
 }
-.cards .card3 .transaction .box .price.green {
+.card3 .transaction .box .price.green {
     color: #41D4A8;
 }
 @media(max-width: 992px) {
     .overview .container {
         padding: 15px !important;
+        grid-template-areas: none;
     }
     .cards {
         overflow-x: scroll;
