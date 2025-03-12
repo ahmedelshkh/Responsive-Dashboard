@@ -353,7 +353,7 @@ header .profile {
 }
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
     gap: 20px;
 }
 .cards .card {
@@ -502,4 +502,18 @@ header .profile {
 }
 .cards .card3 .transaction .box .price.green {
     color: #41D4A8;
+}
+@media(max-width: 992px) {
+    .overview .container {
+        padding: 15px !important;
+    }
+    .cards {
+        overflow-x: scroll;
+    }
+    .cards::-webkit-scrollbar {
+        display: none;
+    }
+    .cards .card2 > p {
+        text-align-last: left;
+    }
 }
