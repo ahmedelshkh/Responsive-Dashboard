@@ -277,7 +277,7 @@
             <div class="container">
                 <div class="cards" id="cards">
                     <div class="card1">
-                        <p>My Cards</p>
+                        <p class="p-style">My Cards</p>
                         <div class="card">
                             <div>
                                 <div class="balance">$5,776</div>
@@ -307,7 +307,7 @@
                         </div>
                     </div>
                     <div class="card2">
-                        <p>See All</p>
+                        <p class="p-style">See All</p>
                         <div class="card">
                             <div>
                                 <div class="balance">$5,776</div>
@@ -338,7 +338,7 @@
                     </div>
                 </div>
                 <div class="card3" id="transaction">
-                    <p>Recent Transaction</p>
+                    <p class="p-style">Recent Transaction</p>
                     <div class="transaction">
                         <div class="box">
                             <div class="info">
@@ -410,17 +410,18 @@
                     </div>
                 </div>
                 <div id="w-activity">
-                    <p>Weekly Activity</p>
-                    <canvas id="activity-chart"></canvas>
+                    <p class="p-style">Weekly Activity</p>
+                    <canvas id="activity-chart" height="100"></canvas>
                 </div>
                 <div id="stats">
-                    <p>Expense Statistics</p>
+                    <p class="p-style">Expense Statistics</p>
                     <canvas id="expense-chart"></canvas>
                 </div>
-            </div>
         </div>
         <!-- End OverView Section -->
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script src="script.js"></script>
 </body>
 </html>
