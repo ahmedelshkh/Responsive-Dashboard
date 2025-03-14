@@ -349,7 +349,7 @@ header .profile {
     background-color: var(--bg-color-main);
 }
 .overview .container {
-    padding: 15px 0 0 40px;
+    padding: 15px 30px;
     display: grid;
     grid-template-areas:
         "cards cards transactions"
@@ -361,6 +361,7 @@ header .profile {
     display: grid;
     grid-template-columns: repeat(2, minmax(280px, 1fr));
     gap: 20px;
+    grid-area: cards;
 }
 .cards .card {
     padding-top: 15px;
@@ -432,9 +433,7 @@ header .profile {
 .cards .card1 .card .card-num {
     color: var(--color-white);
 }
-.cards .card1 p,
-.cards .card2>p,
-.card3>p {
+.p-style {
     font-size: var(--fs-22);
     color: var(--font-color-main);
     font-weight: 700;
@@ -463,6 +462,9 @@ header .profile {
 }
 .cards .card2 .card .card-logo div {
     background-color: rgb(145 153 175 / 50%);
+}
+.card3 {
+    grid-area: transactions;
 }
 .card3 .transaction {
     padding: 15px;
@@ -509,10 +511,20 @@ header .profile {
 .card3 .transaction .box .price.green {
     color: #41D4A8;
 }
+#w-activity {
+    grid-area: w-activity;
+}
+#stats {
+    grid-area: stats;
+}
+#activity-chart {
+    background-color: var(--color-white);
+    border-radius: 25px;
+    padding: 15px;
+}
 @media(max-width: 1170px) {
     .overview .container {
         padding: 15px !important;
-        grid-template-areas: none;
     }
     .cards {
         overflow-x: scroll;
